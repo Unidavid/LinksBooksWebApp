@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>LINKSBOOKS SHOP: Formulario de Sugerencia</title>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="img/img_sueltas/icono.png">
+    <link rel="stylesheet" type="text/css" href="CSS/Sugerencia.css" />
+    <script type="text/javascript" src="JS/script.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <h2 style="text-align: center;">Formulario de Sugerencia</h2>
+    </div>
+    <div class="topnav">
+        <a href="index.html">Inicio</a>
+        <a href="Novedades.html">Novedades</a>
+        <a href="Catalogo.html">Catálogo</a>
+        <a href="Ofertas.html">Ofertas</a>
+        <a href="Recomendaciones.html">Recomendaciones</a>
+        <a href="Formularios.html">Formularios</a>
+        <a href="Contacto.html" style="float:right">Contacto</a>
+    </div>
+    <div class="articles">
+        <article>
+            <h2 style="font-size: 20px;"><strong>IMPORTANTE</strong></h2><br>
+            <p>Para que se haga efectiva la sugerencia debe rellenar los campos que se solicitan y confirmar pulsando el botón.</p>
+            <p>Cualquier opción como abandonar el sitio implica el borrado de la información introducida.</p>
+        </article>
+        <article>
+            <h2>Datos a introducir</h2><br>
+            <form id="sugerencia">
+                <div class="row">
+                    <div class="column">
+                        <label for="nombre">Nombre: </label><label style="color: red;">*</label><br><br>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="column">
+                        <label for="apellidos">Apellidos: </label><label style="color: red;">*</label><br><br>
+                        <input type="text" id="apellidos" name="apellidos" required>
+                    </div>
+                    <div class="column">
+                        <label for="DNI">DNI: </label><label style="color: red;">*</label><br><br>
+                        <input type="text" id="DNI" name="DNI" minlength="9" maxlength="9" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <label>Género: </label><label style="color: red;">*</label><br><br>
+                        <input type="radio" id="hombre" name="gender" value="Hombre" required>
+                        <label for="hombre">Hombre</label><br>
+                        <input type="radio" id="mujer" name="gender" value="Mujer" required>
+                        <label for="mujer">Mujer</label><br>
+                        <input type="radio" id="otro" name="gender" value="Otro" required>
+                        <label for="otro">Prefiero no decirlo</label>
+                    </div>
+                    <div class="column">
+                        <label for="fechaNacimiento">Fecha de Nacimiento: </label><label style="color: red;">*</label><br><br>
+                        <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+                    </div>
+                    <div class="column">
+                        <label for="email">Correo eléctronico: </label><label style="color: red;">*</label><br><br>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <label>Motivo de su sugerencia: </label><label style="color: red;">*</label><br><br>
+                    <textarea name="sugerencias" id="sugerencias" rows="10" cols="60" form="sugerencia" style="resize: none;" required></textarea>
+                </div>
+                <div class="row">
+                    <label style="color: red;">* </label><label>Implica campo obligatorio.</label>
+                    <div id="botones">
+                        <input type="submit" value="Enviar" onclick="mostrarInformacionSugerencia(sugerencia)">
+                        <input style="margin-left:20%" type="reset" value="Restablecer">
+                    </div>
+                </div>
+            </form>
+        </article>
+    </div>
+    <footer>
+        <p>Información y bases legales de la página web.</p>
+        <a href="AcercaDe.html">Acerca de</a>
+    </footer>
+</body>
+
+</html>
