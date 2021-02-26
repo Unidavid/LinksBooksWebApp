@@ -1,2 +1,2 @@
 # LinksBooksWebApp
-Aplicación que consisten en una página web de una librería
+Aplicación que consiste en una página web de una librería
